@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Savannah Luy</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> <!-- Set Icon -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Link to external style.css file -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body id="home"> <!-- Entire Background -->
+    
+    <main class="flex-shrink-0">
+        <!-- Carousel as background -->
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <picture>
+                        <!-- For mobile devices -->
+                        <source media="(max-width: 430px)" srcset="assets/images/mobile-1.jpg">
+                        <!-- For desktop devices -->
+                        <source media="(min-width: 431px)" srcset="assets/images/1.jpg">
+                        <!-- Fallback image if the browser doesn't support <picture> -->
+                        <img class="d-block w-100" src="assets/images/1.jpg" alt="First slide">
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <!-- For mobile devices -->
+                        <source media="(max-width: 430px)" srcset="assets/images/mobile-1.jpg">
+                        <!-- For desktop devices -->
+                        <source media="(min-width: 431px)" srcset="assets/images/2.jpg">
+                        <!-- Fallback image if the browser doesn't support <picture> -->
+                        <img class="d-block w-100" src="assets/images/1.jpg" alt="Second slide">
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <!-- For mobile devices -->
+                        <source media="(max-width: 430px)" srcset="assets/images/mobile-1.jpg">
+                        <!-- For desktop devices -->
+                        <source media="(min-width: 431px)" srcset="assets/images/3.jpg">
+                        <!-- Fallback image if the browser doesn't support <picture> -->
+                        <img class="d-block w-100" src="assets/images/1.jpg" alt="Third slide">
+                    </picture>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    
+        <!-- Navbar -->
+        <div class="content" style="position: relative; z-index: 1;">
+            <div class="container" style="background-color: pink;">
+                <nav class="navbar navbar-expand-lg fixed-top">
+                    <div class="container-fluid my-4 mx-4 nav-text" style="background-color: transparent">
+                        <a class="navbar-brand" style="color: black;" href="#home">Savannah Quinn Luy</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#education">Education</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#experience">Experience</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#projects">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#resources">Resources</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#connect">Connect</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+    
+                <!-- Main Header -->
+                <!-- <header class="py-5 mt-5">
+                    <div class="container px-5 pb-5 mt-5">
+                        <div class="row gx-5 align-items-center" id="head">
+                            <div class="col-xxl-5">
+                                <div class="mt-md-3 mt-0 text-center text-xxl-start" style="background-color: pink;">
+                                    <h1>Welcome to Savannah Quinn Luy's Portfolio</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header> -->
+            </div>
+        </div>
+    </main>
+    
+
+    <!--About-->
+    <section class="bg-light py-5" id="about">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-16">
+                    <div class="text-center my-5">
+                        <div class="about-component">
+                            <!-- Image Section -->
+                            <div class="about-image-section">
+                                <img class="rounded-corners" src="assets/images/profile.png" alt="Example Image">
+                            </div>
+                    
+                            <!-- Text Section -->
+                            <div class="about-text-section">
+                                <h2 class="heading">Hi, I'm Savannah!</h2>
+                                <p class="text-muted subheading"><br>I began my journey through Computer Science when I realized that it lies at the intersection of my identity. 
+                                    I am a problem-solver with an appreciation for efficiency, improvement, harmony and aesthetics. </p>
+                                <p class="text-muted subheading"> My socio-cultural experiences throughout life have shown me that empathy is paramount for evaluating the decisions that we make and how 
+                                    it has the ability to create everlasting impact.</p>
+                                <p class="text-muted subheading">I strive to be a forever-learner, devoted to gaining perspective of the world around me by understanding the 
+                                    intricacies of interconnected systems and letting my curiosities and passions lead the way.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="bg-light py-5" id="education">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-16">
+                    <div class="text-center my-5">
+                        <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Education</span></h2>
+                        <p class="lead fw-light subheading mb-4">B.S. Computer Science, College of Letters & Sciences, University of California, Davis. Graduated June 2023.</p>
+                        <p class="text-muted subheading">Relevant Coursework</p>
+                        <p class="text-muted subheading">Organizations</p>
+                        <div class="d-flex justify-content-center fs-2 gap-4">
+                            <!-- necessary links-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <!-- Skills-->
+    <section class="bg-light py-5" id="experience">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-16">
+                    <div class="text-center my-5">
+                        <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Experience</span></h2>
+                        <p class="lead fw-light subheading mb-4">A look at previous task milestones. </p>
+
+                        <div class="subheading">
+                            <div class="experience-collapsible">
+                                <button type="button" class="collapsible">Health Rosetta</button>
+                                <div class="collapsible-content">
+                                <p>Lorem ipsum...</p>
+                                </div>
+                            </div>
+                            <div class="experience-collapsible">
+                                <button type="button" class="collapsible">Luy Photography</button>
+                                <div class="collapsible-content">
+                                <p>Lorem ipsum...</p>
+                                </div>
+                            </div>
+                            <div class="experience-collapsible">
+                                <button type="button" class="collapsible">UC Davis, College of Engineering</button>
+                                <div class="collapsible-content">
+                                <p>Lorem ipsum...</p>
+                                </div>
+                            </div>
+                            <div class="experience-collapsible">
+                                <button type="button" class="collapsible">Women in Computer Science at UC Davis</button>
+                                <div class="collapsible-content">
+                                <p>Lorem ipsum...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="bg-light py-5" id="projects">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-16">
+                    <div class="text-center my-5">
+                        <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Projects</span></h2>
+                        <p class="lead fw-light subheading mb-4">A preview of my selected works.</p>
+                        <p class="text-muted subheading">Lorem ipsum odor amet, consectetuer adipiscing elit. Orci cursus vel fames diam suspendisse mollis. 
+                            Rutrum mollis scelerisque ad sodales; risus tempor viverra. Tristique sagittis torquent tellus malesuada; tellus felis. Dictum 
+                            iaculis dui netus sollicitudin nullam nunc molestie. Per non felis nisi vulputate, risus habitant etiam. Natoque augue mus iaculis 
+                            himenaeos eros cubilia.</p>
+                        <div class="d-flex justify-content-center fs-2 gap-4">
+                            <!-- links / cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="bg-light py-5" id="resources">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-16">
+                    <div class="text-center my-5">
+                        <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Resources</span></h2>
+                        <p class="lead fw-light subheading mb-4">A collection of helpful community resources.</p>
+                        <div class="d-flex justify-content-center fs-2 gap-4">
+                            <!-- links / cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect -->
+        <!-- Github -->
+        <!-- LinkedIn -->
+        <!-- Calendly -->
+    <section class="bg-light py-5" id="connect">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-16">
+                    <div class="text-center my-5">
+                        <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Connect</span></h2>
+                        <p class="lead fw-light subheading mb-2">Schedule time on my calendar, explore my work, or drop me an email—I’d love to connect! </p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <!-- Use custom class btn-circle for consistent size and remove Bootstrap color classes -->
+                            <a class="btn-circle" href="https://calendly.com/savannahqluy/30min" target="_blank" aria-label="Calendar">
+                                <i class="far fa-calendar"></i>
+                            </a>
+                            <a class="btn-circle" href="https://github.com/savannahluy" target="_blank" aria-label="Github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a class="btn-circle" href="https://www.linkedin.com/in/savannah-luy/" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a class="btn-circle" href="mailto:savannahqluy@gmail.com" aria-label="Email">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 text-center">
+        <div class="text-center mb-3 subheading">
+            Developed by Savannah Luy 🩷.
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script> 
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
+</body>
+
+</html>
