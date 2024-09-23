@@ -1,14 +1,5 @@
 /* Navbar */
 
-/* Ensure body and html take full height */
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f9fa;
-}
-
 /* The main content should expand to take available space */
 main {
     flex-grow: 1;
@@ -65,7 +56,7 @@ header, .container {
     display: flex; /* Enable flexbox layout */
     align-items: center; /* Vertically center the content */
     justify-content: space-between; /* Distribute space between image and text */
-    gap: 20px; /* Adds space between the image and text */
+    gap: 40px; /* Adds space between the image and text */
     padding: 20px;
 }
 
@@ -89,6 +80,21 @@ header, .container {
         flex-direction: column; /* Stack the sections vertically on smaller screens */
         text-align: center;
     }
+}
+
+/* Education */
+.education-component {
+    display: flex;                  /* Enable Flexbox */
+    justify-content: space-between; /* Optional: adds space between items */
+}
+
+.education-text-component {
+    background-color: #eee;
+    border-radius: 15px;
+    flex: 1;                       /* Equal space for each component */
+    padding: 20px;            /* Optional: add padding between items */
+    margin: 10px;
+    text-align: center;            /* Optional: center text */
 }
 
 /* Experience */
@@ -117,7 +123,7 @@ header, .container {
 
 /* Style the collapsible content. Note: hidden by default */
 .collapsible-content {
-  padding: 18px;
+  padding: 20px;
   display: none;
   overflow: hidden;
   border-radius: 15px;
@@ -136,6 +142,33 @@ header, .container {
 content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+/* Projects */
+
+.project-component {
+    display: flex;                  /* Enable Flexbox */
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+    justify-content: space-between; /* Optional: adds space between items */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensures content stays within the bounds */
+    text-align: center; /* Center text in the component */
+}
+
+.project-text-component {
+    background-color: #eee;
+    border-radius: 15px;
+    flex: 1;                       /* Equal space for each component */
+    padding: 20px;            /* Optional: add padding between items */
+    margin: 10px;
+    text-align: center;            /* Optional: center text */
+}
+
+.project-component img {
+    border-radius: 15px;
+    max-width: 100%; /* Ensures the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Footer */
 footer {
     background-color: #F0F0F0;
@@ -144,6 +177,16 @@ footer {
 }
 
 /* Applicable everywhere */
+
+/* Ensure body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
 .nav-text {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -162,9 +205,37 @@ footer {
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    text-align: justify;
+    text-align: left;
+}
+
+.subheading-bold {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+}
+
+.body-text {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
 }
 
 .rounded-corners {
     border-radius: 15px;
+}
+
+.btn-space-divide {
+    display: flex;
+    justify-content: space-between; /* Optional: adds space between items */
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
 }

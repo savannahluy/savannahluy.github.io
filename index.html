@@ -27,6 +27,40 @@
   <body id="home"> <!-- Entire Background -->
     
     <main class="flex-shrink-0">
+        <!-- Navbar -->
+        <div class="content" style="position: relative; z-index: 1;">
+            <nav class="navbar navbar-expand-lg" style="background-color:#f8f9fa">
+                <div class="container-fluid my-4 nav-text">
+                    <a class="navbar-brand" style="color: black;" href="#home">Savannah Quinn Luy</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fas fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#education">Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#resources">Resources</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#connect">Connect</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
         <!-- Carousel as background -->
         <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
@@ -70,55 +104,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    
-        <!-- Navbar -->
-        <div class="content" style="position: relative; z-index: 1;">
-            <div class="container" style="background-color: pink;">
-                <nav class="navbar navbar-expand-lg fixed-top">
-                    <div class="container-fluid my-4 mx-4 nav-text" style="background-color: transparent">
-                        <a class="navbar-brand" style="color: black;" href="#home">Savannah Quinn Luy</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#education">Education</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#experience">Experience</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#projects">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#resources">Resources</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#connect">Connect</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-    
-                <!-- Main Header -->
-                <!-- <header class="py-5 mt-5">
-                    <div class="container px-5 pb-5 mt-5">
-                        <div class="row gx-5 align-items-center" id="head">
-                            <div class="col-xxl-5">
-                                <div class="mt-md-3 mt-0 text-center text-xxl-start" style="background-color: pink;">
-                                    <h1>Welcome to Savannah Quinn Luy's Portfolio</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </header> -->
-            </div>
-        </div>
     </main>
     
 
@@ -136,7 +121,7 @@
                     
                             <!-- Text Section -->
                             <div class="about-text-section">
-                                <h2 class="heading">Hi, I'm Savannah!</h2>
+                                <h2 class="heading">Hello World! I'm Savannah!</h2>
                                 <p class="text-muted subheading"><br>I began my journey through Computer Science when I realized that it lies at the intersection of my identity. 
                                     I am a problem-solver with an appreciation for efficiency, improvement, harmony and aesthetics. </p>
                                 <p class="text-muted subheading"> My socio-cultural experiences throughout life have shown me that empathy is paramount for evaluating the decisions that we make and how 
@@ -159,8 +144,45 @@
                     <div class="text-center my-5">
                         <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Education</span></h2>
                         <p class="lead fw-light subheading mb-4">B.S. Computer Science, College of Letters & Sciences, University of California, Davis. Graduated June 2023.</p>
-                        <p class="text-muted subheading">Relevant Coursework</p>
-                        <p class="text-muted subheading">Organizations</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="education-component">
+                                        <div class="education-text-component">
+                                            <h6 class="subheading" style="font-weight: bold;">Relevant Coursework</h5>
+                                            <ul class="body-text">
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-036b-software-development-object-oriented-programming-c" style="color: black" target="_blank">ECS 36B: Object Oriented Programming</a></li>
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-036c-data-structures-algorithms-programming" style="color: black" target="_blank">ECS 36C: Data Structures</a></li>
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-122a-algorithm-design-and-analysis" style="color: black" target="_blank">ECS 122A: Algorithm Design & Analysis</a></li>
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-150-operating-systems-system-programming" style="color: black" target="_blank">ECS 150: Operating Systems</a></li>
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-152a-computer-networks" style="color: black" target="_blank">ECS 152A: Computer Networks</a></li>
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-153-computer-security" style="color: black" target="_blank">ECS 153: Computer Security</a></li>
+                                                <li><a href="https://cs.ucdavis.edu/schedules-classes/ecs-174-computer-vision" style="color: black" target="_blank">ECS 174: Computer Vision</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="education-component">
+                                        <div class="education-text-component">
+                                            <h6 class="subheading" style="font-weight: bold;">Organizations</h5>
+                                            <ul class="body-text">
+                                                <li>Women in Computer Science (WiCS) at UC Davis
+                                                    <ul><li>Co-President, Director of Events</li></ul>
+                                                </li>
+                                                <li>Davis Design Interactive (DI)
+                                                    <ul>
+                                                        <li>Design Fellow</li>
+                                                        <li>Most Innovative Design Award for UI Redesign</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="d-flex justify-content-center fs-2 gap-4">
                             <!-- necessary links-->
                         </div>
@@ -178,31 +200,104 @@
                 <div class="col-xxl-16">
                     <div class="text-center my-5">
                         <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Experience</span></h2>
-                        <p class="lead fw-light subheading mb-4">A look at previous task milestones. </p>
+                        <p class="lead fw-light subheading mb-4">A deep-dive into my previous work. </p>
 
                         <div class="subheading">
                             <div class="experience-collapsible">
-                                <button type="button" class="collapsible">Health Rosetta</button>
+                                <button type="button" class="collapsible btn-space-divide" style="font-weight: bold;">
+                                    <span class="left-text">Health Rosetta</span>
+                                    <span class="right-text">Aug 2022 - Present</span>
+                                </button>
                                 <div class="collapsible-content">
-                                <p>Lorem ipsum...</p>
+                                    <p class="heading">Software Developer, Technical Product Manager Intern</p>
+                                    <p>Rails &middot; HTML.ERB &middot; SCSS &middot; Bootstrap &middot; JavaScript &middot; StimulusJS &middot; PostgreSQL </p>
+                                    <p class="text-muted subheading">During my time at Health Rosetta, I've had the privilege to work directly under our C-Suites.
+                                        Lorem ipsum odor amet, consectetuer adipiscing elit. Elit potenti vulputate, habitant penatibus viverra ridiculus sollicitudin
+                                        cursus duis. Pulvinar taciti rhoncus justo porta erat purus ante. Venenatis elementum massa feugiat vulputate, vivamus ullamcorper
+                                        per sapien. Ipsum per habitant dictum; amet nostra lectus auctor. Commodo nam venenatis vel amet suscipit posuere. Torquent quis
+                                        facilisis vivamus hendrerit vulputate. Sociosqu pellentesque platea mattis sed amet sem. Morbi vulputate elit iaculis sagittis senectus.
+                                    </p>
+                                    <h6 class="subheading-bold">DocuSign API Integration</h6>
+                                    <ul>
+                                        <li>Evaluated and vetted different API vendors based on different criteria including API functionality, pricing models, security/compliance/legal needs, developer tools and support.</li>
+                                        <li>Selected the most optimal API based on our needs.</li>
+                                        <li>Made product decisions informed by our selected API.</li>
+                                        <li>Created comprehensive user stories to cater to a diverse set of stakeholders.</li>
+                                        <li>Understood and navigated the nuances between different product concepts internally and externally.</li>
+                                        <li>Aided in the construction and design of the functionality related to text tags, signing experience, templates.</li>
+                                        <li>Served as the primary point of contact for the project both internally and externally with several API vendors, which later became DocuSign.</li>
+                                        <li>Set up meetings and progressed the project forward.</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">Side Navigation Implementation</h6>
+                                    <ul>
+                                        <li>Wired up side navigation with specific use cases in mind, including click, click-off, ‘x’, and considerations for mobile and responsive web design.</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">Header Component Update Propagation</h6>
+                                    <ul>
+                                        <li>Implemented header component changes across the entire platform for 250 routes.</li>
+                                        <li>Implemented changes in an orderly and organized manner.</li>
+                                        <li>Handled specific use cases such as combination of features, primary actions, overlays, mobile considerations, and responsive web designs.</li>
+                                        <li>Addressed challenges like inserting dropdown, dealing with unforeseen issues such as the blue circle ‘+’ buttons, use cases for different action types.</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">CSV Export Functionality</h6>
+                                    <ul>
+                                        <li>Created a CSV export feature capable of displaying over 16,000 total fields.</li>
+                                        <li>Understood and leveraged the CSV ruby gem.</li>
+                                        <li>Identified and managed the interconnectedness and dependencies of Health Rosetta specific objects (including Users, Plans, Plan Grade Sequences, Plan Sponsors, Solutions, Answers, Answerable Types, Elements, etc.).</li>
+                                        <li>Performed extensive testing, data validation, and created mock data for thorough validation.</li>
+                                        <li>Worked under pressure / deadline for stakeholders.</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">NPI Search Fix</h6>
+                                    <ul>
+                                        <li>Served as the main point of contact with the Huron Group.</li>
+                                        <li>Tested and identified the correct API endpoint.</li>
+                                        <li>Communicated about specific fields critical to using NPI Search.</li>
+                                        <li>Made necessary adjustments to ensure the search was fully functional as it was before.</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">UI Functionality Fixes and Improvement</h6>
+                                    <ul>
+                                        <li>Addressed specific UI functionality improvements, such as bulk removal of team members, adding fields to forms, redirecting users after ticket deletion, adding new dropdowns to the topbar, adding default fields where necessary, removing / adding UI components for aesthetic purposes, updating permissions, adding columns to database objects, unblocking errors on specific routes, identifying nil errors, performing data migrations (create new and update existing objects).</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">Team Happy Hour Planning and Hosting</h6>
+                                    <ul>
+                                        <li>Planned and hosted a team happy hour event.</li>
+                                        <li>Worked cross-functionally to generate engaging ideas that promote team synergy.</li>
+                                        <li>Suggested initiatives to enhance team connection, communication, and collaboration.</li>
+                                    </ul>
+                                    
+                                    <h6 class="subheading-bold">RosettaFest 2022, 2023, 2024</h6>
+                                    <ul>
+                                        <li>Served as general staff support, registration support and photographer during all three in-person events, all while maintaining current software development priorities.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="experience-collapsible">
-                                <button type="button" class="collapsible">Luy Photography</button>
+                                <button type="button" class="collapsible btn-space-divide" style="font-weight: bold;">
+                                    <span class="left-text">Luy Photography</span>
+                                    <span class="right-text">May 2017 - Present</span>
+                                </button>
                                 <div class="collapsible-content">
-                                <p>Lorem ipsum...</p>
-                                </div>
-                            </div>
-                            <div class="experience-collapsible">
-                                <button type="button" class="collapsible">UC Davis, College of Engineering</button>
-                                <div class="collapsible-content">
-                                <p>Lorem ipsum...</p>
-                                </div>
-                            </div>
-                            <div class="experience-collapsible">
-                                <button type="button" class="collapsible">Women in Computer Science at UC Davis</button>
-                                <div class="collapsible-content">
-                                <p>Lorem ipsum...</p>
+                                    <p class="heading">Business Owner, Photographer</p>
+                                    <p>DSLR &middot; Adobe Creative Cloud &middot; Client-Relationship Management &middot; Google Sheets &middot; Pixieset &middot; Customer Service &middot; Social Media Marketing</p>
+                                    
+                                    <h6 class="subheading-bold">Photography Services</h6>
+                                    <ul>
+                                        <li>Evaluated and vetted different API vendors based on different criteria including API functionality, pricing models, security/compliance/legal needs, developer tools and support.</li>
+                                        <li>Selected the most optimal API based on our needs.</li>
+                                        <li>Made product decisions informed by our selected API.</li>
+                                        <li>Created comprehensive user stories to cater to a diverse set of stakeholders.</li>
+                                        <li>Understood and navigated the nuances between different product concepts internally and externally.</li>
+                                        <li>Aided in the construction and design of the functionality related to text tags, signing experience, templates.</li>
+                                        <li>Served as the primary point of contact for the project both internally and externally with several API vendors, which later became DocuSign.</li>
+                                        <li>Set up meetings and progressed the project forward.</li>
+                                    </ul>
+
                                 </div>
                             </div>
                         </div>
@@ -225,8 +320,42 @@
                             iaculis dui netus sollicitudin nullam nunc molestie. Per non felis nisi vulputate, risus habitant etiam. Natoque augue mus iaculis 
                             himenaeos eros cubilia.</p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
-                            <!-- links / cards -->
+                            <!-- 3 cards, rest as links --> 
+                            <div class="col-md-4">
+                                <div class="project-component">
+                                    <img class="d-block" src="https://placehold.co/30x20" alt="Project 1">
+                                    <div class="project-text-component">
+                                        <h4 class="subheading-bold">Project Title 1</h4>
+                                        <h6 class="body-text">Description of project 1.</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="project-component">
+                                    <img class="d-block" src="https://placehold.co/30x20" alt="Project 2">
+                                    <div class="project-text-component">
+                                        <h4 class="subheading-bold">Project Title 1</h4>
+                                        <h6 class="body-text">Description of project 1.</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="project-component">
+                                    <img class="d-block" src="https://placehold.co/30x20" alt="Project 3">
+                                    <div class="project-text-component">
+                                        <h4 class="subheading-bold">Project Title 1</h4>
+                                        <h6 class="body-text">Description of project 1.</h6>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <br>
+                        <h6 class="text-muted subheading">Additional Works:</p>
+                            <ul class="text-muted subheading">
+                                <li>Lorem ipsum odor amet, consectetuer adipiscing elit.</li>
+                                <li>Vivamus dictum diam porttitor himenaeos id ipsum torquent ex pulvinar.</li>
+                                <li>LMi tempus consectetur integer ullamcorper at libero mi pellentesque phasellus.</li>
+                            </ul>
                     </div>
                 </div>
             </div>
@@ -240,9 +369,38 @@
                 <div class="col-xxl-16">
                     <div class="text-center my-5">
                         <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Resources</span></h2>
-                        <p class="lead fw-light subheading mb-4">A collection of helpful community resources.</p>
-                        <div class="d-flex justify-content-center fs-2 gap-4">
-                            <!-- links / cards -->
+                        <p class="lead fw-light subheading mb-4">Created and curated with 🩷 for my community.</p>
+                        <p class="text-muted subheading">Navigating the tech industry as a first-generation Software Developer has been both my biggest challenge
+                            and my greatest reward. Thanks to the generosity and unconditional support from my mentors, peers, and broader network, I've been able
+                            to grow in this field. I am committed to giving back and providing others with the same opportunities I received.</p>
+                        <div class="d-flex justify-content-center fs-2 gap-4" style="height: auto;">
+                            <!-- carousel with links -->
+                            <div id="carouselExampleIndicators" class="carousel slide" style="margin: 30px; border-radius: 25px; width: 800px; height: 450px;" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100" src="https://placehold.co/400x800" alt="First slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="https://placehold.co/400x800" alt="Second slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="https://placehold.co/400x800" alt="Third slide">
+                                  </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +418,7 @@
                 <div class="col-xxl-16">
                     <div class="text-center my-5">
                         <h2 class="display-5 heading fw-bolder"><span class="text-gradient d-inline">Connect</span></h2>
-                        <p class="lead fw-light subheading mb-2">Schedule time on my calendar, explore my work, or drop me an email—I’d love to connect! </p>
+                        <p class="lead fw-light subheading mb-2">Schedule time on my calendar, explore my work, find me on LinkedIn, or drop me an email—I’d love to connect! </p>
                         <div class="d-flex justify-content-center gap-2">
                             <!-- Use custom class btn-circle for consistent size and remove Bootstrap color classes -->
                             <a class="btn-circle" href="https://calendly.com/savannahqluy/30min" target="_blank" aria-label="Calendar">
@@ -285,7 +443,7 @@
     <!-- Footer -->
     <footer class="bg-light mt-5 text-center">
         <div class="text-center mb-3 subheading">
-            Developed by Savannah Luy 🩷.
+            Developed by Savannah Luy.
         </div>
     </footer>
     
