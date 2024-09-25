@@ -43,8 +43,14 @@ header, .container {
     font-size: 20px;
     border-radius: 50%;  /* Makes the button round */
     background-color: transparent; /* Set background color */
+    text-decoration: none;
     color: black;  /* Icon color */
     border: none;  /* Optional: Remove border */
+}
+
+.btn-circle:hover {
+    text-decoration: none;
+    color: #bcd6fd;
 }
 
 .btn-circle i {
@@ -118,7 +124,8 @@ header, .container {
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: #ccc;
+    transform: translateY(-5px);  /* Slight move up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -142,31 +149,55 @@ header, .container {
 content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.collapsible-btn {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 /* Projects */
 
 .project-component {
-    display: flex;                  /* Enable Flexbox */
+    display: flex; /* Enable Flexbox */
     flex-direction: column; /* Stack the sections vertically on smaller screens */
     justify-content: space-between; /* Optional: adds space between items */
-    border: 1px solid #ccc; /* Add a border for visual separation */
+    align-items: center;
+    background-color: #eee;
     border-radius: 15px; /* Rounded corners */
     overflow: hidden; /* Ensures content stays within the bounds */
-    text-align: center; /* Center text in the component */
+}
+
+.project-component:hover {
+    transform: translateY(-5px);  /* Slight move up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .project-text-component {
-    background-color: #eee;
-    border-radius: 15px;
+    background-color: transparent;
     flex: 1;                       /* Equal space for each component */
-    padding: 20px;            /* Optional: add padding between items */
-    margin: 10px;
-    text-align: center;            /* Optional: center text */
+    padding: 5px;            /* Optional: add padding between items */
+    margin: 15px;
 }
 
 .project-component img {
+    width: 270px;
     border-radius: 15px;
-    max-width: 100%; /* Ensures the image scales responsively */
     height: auto; /* Maintain aspect ratio */
+    margin-top: 15px;
+}
+
+/* Resources */
+.resources-component {
+    background-color: #eee;
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
 }
 
 /* Footer */
@@ -191,6 +222,10 @@ html, body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.nav-link:hover {
+    color: #bcd6fd;
 }
 
 .heading {
@@ -227,15 +262,33 @@ html, body {
     border-radius: 15px;
 }
 
-.btn-space-divide {
-    display: flex;
-    justify-content: space-between; /* Optional: adds space between items */
+.tag-component {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 50px;       /* Rounded corners */
+    padding: 5px 10px;         /* Space around the pill content */
+    margin: 5px;               /* Space between pills */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
-.left-text {
-    text-align: left;
+.links {
+    text-decoration: none;
+    color: #6c757d;
 }
 
-.right-text {
-    text-align: right;
+.links-component {
+    text-decoration: none;
+    color: black;
+}
+
+.links:hover {
+    text-decoration: none;
+    color: #bcd6fd;
+}
+
+.links-component:hover {
+    text-decoration: none;
+    color: #bcd6fd;
 }
