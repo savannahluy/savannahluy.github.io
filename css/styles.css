@@ -188,6 +188,53 @@ content: "\2796"; /* Unicode character for "minus" sign (-) */
     margin-top: 15px;
 }
 
+/* Individual Projects*/
+
+.proj-page-component {
+    display: flex;                  /* Enable Flexbox */
+    justify-content: space-between; /* Optional: adds space between items */
+}
+
+.proj-page-card-component {
+    background-color: #eee;
+    border-radius: 15px;
+    flex: 1;                       /* Equal space for each component */
+    padding: 20px;            /* Optional: add padding between items */
+    margin: 10px;
+    text-align: center;            /* Optional: center text */
+}
+
+.proj-page-image-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 75px 0; /* Adds space below image */
+}
+
+.proj-page-image-component img {
+    border-radius: 15px;
+    max-width: 100%;             /* Ensures the image scales */
+    height: auto;                /* Maintains aspect ratio */
+    max-height: 500px;           /* Limits image height */
+    display: block;
+}
+
+.proj-page-caption {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.proj-page-text-component {
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 /* Resources */
 .resources-component {
     background-color: #eee;
@@ -270,7 +317,7 @@ html, body {
     padding: 5px 10px;         /* Space around the pill content */
     margin: 5px;               /* Space between pills */
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .links {
