@@ -188,6 +188,39 @@ content: "\2796"; /* Unicode character for "minus" sign (-) */
     margin-top: 15px;
 }
 
+/* Media */
+.media-component {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Optional: adds space between items */
+    align-items: center;
+    background-color: #eee;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensures content stays within the bounds */
+    margin-bottom: 20px;
+}
+
+.media-component img {
+    width: 180px;
+    border-radius: 15px;
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px;
+}
+
+.media-text-component {
+    border-radius: 15px;
+    flex: 1;                       /* Equal space for each component */
+    padding: 10px;            /* Optional: add padding between items */
+    margin: 10px;
+    text-align: center;            /* Optional: center text */
+}
+
+@media (max-width: 768px) {
+    .media-component {
+        flex-direction: column; /* Stack the sections vertically on smaller screens */
+        text-align: center;
+    }
+}
+
 /* Individual Projects*/
 
 .proj-page-component {
