@@ -83,118 +83,151 @@
                         <div class="proj-page-card-component" style="margin: 20px 0px">
                             <div class="proj-page-image-component">
                                 <img src="assets/images/Google-Gen-AI-Capstone-Thumbnail.jpg">
-                                <p class="body-text proj-page-caption">Output Results of Gen AI Image Understanding.</p>
+                                <p class="body-text proj-page-caption">Output Results of Generative AI Image Culling Process.</p>
                             </div>
                             <div class="proj-page-text-component">
                                 <div style="margin-bottom: 20px">
                                     <p class="body-text" style="font-style: italic">
-                                        This project aims to automate and streamline the portrait culling process by leveraging Generative AI &mdash;more specifically, Gemini Flash 2.0. I will develop a 
-                                        system within a Kaggle Notebook that takes a collection of untouched portrait photographs as input and outputs a recommended
-                                        selection of the top K images based on predefined quality and uniqueness criteria, mimicking the initial decision-making
-                                        process of a professional portrait photographer.
+                                        This project aims to automate and streamline the Image Culling process of professional portrait photographers by leveraging Generative AI &mdash;more specifically, Gemini Flash 2.0.
+                                        I developed a system within a Kaggle Notebook that takes a collection of untouched portrait photographs as input and outputs a recommended selection of the top K unique (non-redundant) images
+                                        based on predefined quality criteria based on Lighting, Clarity, and the Subject.
                                     </p>
                                 </div>
                                 <div class="d-flex flex-column align-items-left" style="margin-bottom: 20px">
                                     <h5 class="subheading fw-bold" style="margin-bottom: 2px;">Tech Tools</h5>
                                     <div class="d-flex flex-wrap">
                                         <p class="tag-component"><span class="body-text tag-name">Python</span></p>
-                                        <p class="tag-component"><span class="body-text tag-name">Google Gemini Flash 2.0 API</span></p>
+                                        <p class="tag-component"><span class="body-text tag-name">Gemini Flash 2.0</span></p>
+                                        <p class="tag-component"><span class="body-text tag-name">NumPy</span></p>
+                                        <p class="tag-component"><span class="body-text tag-name">Pandas</span></p>
+                                        <p class="tag-component"><span class="body-text tag-name">JSON</span></p>
                                         <p class="tag-component"><span class="body-text tag-name">PIL</span></p>
                                         <p class="tag-component"><span class="body-text tag-name">Markdown</span></p>
+                                        <p class="tag-component"><span class="body-text tag-name">Scikit-learn</span></p>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column align-items-left" style="margin-bottom: 20px">
                                     <h5 class="subheading fw-bold" style="margin-bottom: 2px;">Prerequisites</h5>
                                     <ol class="body-text">
-                                        <li><a href="https://aistudio.google.com/app/apikey" target="_blank" class="links">Add Gemini API Key as 'GOOGLE_API_KEY' to Kaggle Secrets<a></li>
+                                        <li><a href="https://aistudio.google.com/app/apikey" target="_blank" class="links">Generate Gemini API Key and add as 'GOOGLE_API_KEY' to Kaggle Secrets<a></li>
                                         <li><a href="https://aistudio.google.com/app/apikey" target="_blank" class="links">Add Image Culling Dataset to Kaggle Datasets</a></li>
                                     </ol>
-                                </div>                              
+                                </div>
                                 <div style="margin-bottom: 20px">
-                                    <h5 class="subheading fw-bold">Proposed Solution</h5>
-                                    <p class="body-text">This project aims to automate and streamline the portrait culling process by leveraging Generative AI.
-                                        We will develop a system within a Kaggle Notebook that takes a collection of untouched portrait photographs as input and
-                                        outputs a recommended selection of the top images based on predefined quality and uniqueness criteria, mimicking the
-                                        initial decision-making process of a professional photographer.
+                                    <h5 class="subheading fw-bold">Problem Statement</h5>
+                                    <p class="body-text">Image Culling is the critical process of sifting through numerous raw photographs to select the most
+                                        promising images for post-production editing and refinement, presenting a significant bottleneck in a photographer's workflow.
+                                        During a photoshoot, hundreds and even thousands of images are produced. Going through these image sets demands a substantial investment 
+                                        of a photographer's time and focused energy. This manual process diverts valuable hours away from other important aspects of a photographer's
+                                        business which also includes shooting, editing, client communication, marketing, and much more. Generative AI plays a significant role in being able
+                                        to speed up this process, increase efficiency and productivity, improve accuracy in identifying high-quality images, and enhancing client satisfaction. 
                                     </p>
                                 </div>
                                 <div style="margin-bottom: 20px">
-                                    <h5 class="subheading fw-bold">Project Goals</h5>
-                                    <p class="body-text">The goal is to create a functional proof-of-concept that processes a batch of input images, uses Image
-                                        Understanding with Structured Output to score them based on quality metrics, generates Embeddings to assess similarity, and
-                                        applies a selection logic to identify a target number of high-scoring, visually distinct images. The final output will be a
-                                        list or collection of the selected image identifiers, ready for the photographer's final review and editing.
+                                    <h5 class="subheading fw-bold">Project Roadmap</h5>
+                                    <p class="body-text">This project will be executed through the following stages:
+                                        <ul class="body-text">
+                                            <li>Develop a proof of concept for an Image Culling System that processes a batch of portrait images</li>
+                                            <li>Employ Image Understanding with Structured output to score each image based on Lighting Balance, Clarity/Sharpness,
+                                                Pose Naturalness, Smile Genuineness, and Eye Openness</li>
+                                            <li>Further process the images that pass an overall quality threshold, based on an average score of each quality criteria</li>
+                                            <li>Generate visual text descriptions using Generative AI as input for Gemini's text embedding model (text-embedding-004)</li>
+                                            <li>Create a similarity matrix from the embeddings to greedily select the most unique images from the set of images that meets a quality threshold</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div style="margin-bottom: 20px">
+                                    <h5 class="subheading fw-bold">Multimodal Embeddings Constraint</h5>
+                                    <p class="body-text">I wanted to utilize multimodal embeddings for this project but found that Gemini did not provide a multimodal embedding model. This led me
+                                        to experiment with Google Cloud's Vertex AI's multimodal embedding model, however, I found it would be difficult for Vertex AI's capabilites to be "reasonably accessible to all"
+                                        via the Kaggle Notebook and it would have adverse affects from "mininmal costs". In the future, I would love to further this project using Vertex AI's multimodal embedding model,
+                                        but to ease complexity in this project, I use text embeddings as a proxy for true image embeddings.
+                                    </p>
+                                </div>
+                                <div style="margin-bottom: 20px">
+                                    <h5 class="subheading fw-bold">Expected Output</h5>
+                                    <p class="body-text">
+                                        The image set presented below was curated prior to the development of the Image Culling System and thus represents a manual selection process, unaided by AI.
+                                        These images were chosen based on the same quality metrics integrated into the system: lighting, clarity, poses, smiles, and eye openness. In my assessment,
+                                        these images exhibit the highest quality across these attributes.
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/PRE-SELECTED.jpg">
-                                            <p class="body-text proj-page-caption">Expected Output, Pre-selected without AI Usage</p>
+                                            <p class="body-text proj-page-caption">Image Pre-Selection, unaided by AI.</p>
                                         </div>
-                                    </p>
-                                </div>
-                                <div style="margin-bottom: 20px">
-                                    <h5 class="subheading fw-bold">Project Constraints</h5>
-                                    <p class="body-text">I wanted to utilize multimodal embeddings within this project but found that multimodal embeddings were
-                                        not available through Google Gemini. This led me to experiment with Google Cloud's Vertex AI's multimodal embedding capabilities,
-                                        however, I found it would be difficult for other end users to set up Vertex AI's API in order to test this Kaggle notebook. For
-                                        simplicity, in this project, I will utilize text embeddings instead of image embeddings as a proxy.
                                     </p>
                                 </div>
                                 <div style="margin-bottom: 20px">
                                     <h5 class="subheading fw-bold">Gen AI Capabilities</h5>
-                                    <p class="subheading">This solution will demonstrate the application of key Generative AI capabilities:</p>
+                                    <p class="subheading">The following Generative AI Capabilities can be seen demonstrated throughout the Image Culling System:</p>
                                     <h6 class="subheading fw-bold">Image Understanding</h6>
-                                    <p class="body-text">A multimodal AI model will be employed to analyze the visual content of each photograph. It will assess
-                                        critical quality factors such as lighting composition, sharpness/clarity, subject pose naturalness, and the perceived
-                                        genuineness of expressions (e.g., smiles).</p>
+                                    <p class="body-text">Gemini Flash 2.0's Image Understanding capabilities can be seen repeatedly through the course of this project. First, Image Understanding is used to
+                                        analyze and score each image based on different quality criteria (Lighting Balance, Clarity/Sharpness, Pose Naturalness, Smile Genuineness, and Eye Openeess) as seen in Figure 1.a below.
+                                        Second, Image Understanding is also used to generate visual descriptions for each image that passes the quality threshold (Figure 1.b). These visual descriptions will later be used for embeddings.
+                                    </p>
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/IMAGE-UNDERSTANDING.jpg">
                                         </div>
+                                        <div class="proj-page-image-component">
+                                            <img src="assets/images/IMAGE-UNDERSTANDING-2.jpg">
+                                        </div>
                                     <h6 class="subheading fw-bold">Structured Output (JSON Mode)</h6>
-                                    <p class="body-text">To enable systematic analysis and comparison, the Image Understanding model will be prompted to
-                                        return its evaluation in a consistent, structured format (like JSON). This output will include scores or classifications
-                                        for the different quality criteria for each image.</p>
+                                    <p class="body-text">In both Image Understanding instances, where the system receives a response from the model, Structured Output, specifically JSON, is used
+                                        to enforce a consistent format such that the data collected in the response (i.e. descriptions and scores) can be further processed.</p>
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/STRUCTURED-OUTPUT.jpg">
                                         </div>
                                     <h6 class="subheading fw-bold">Embeddings</h6>
-                                    <p class="body-text">To address the requirement for non-redundancy, image embeddings (numerical vector representations) will
-                                        be generated for each photo. These embeddings capture the visual essence of the images, allowing for quantitative
-                                        measurement of similarity between them.</p>
+                                    <p class="body-text">To address the requirement for uniqueness/non-redundancy, text embeddings (numerical vector representations) are generated for each image.
+                                        As previously mentioned, I wanted this part of my system to use image embeddings via Vertex AI's multimodal embedding model, but insisted on using text embeddings from Gemini's
+                                        text embedding model for ease of accessibility. While there can be limitations in the visual descriptions of each image, the text embeddings embody the essence of each image,
+                                        allowing for quantitative measurement of similarity between them.</p>
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/EMBEDDINGS.jpg">
                                         </div>
                                     <h6 class="subheading fw-bold">Vector Search</h6>
-                                        <p class="body-text">To address the requirement for non-redundancy, image embeddings (numerical vector representations) will
-                                            be generated for each photo. These embeddings capture the visual essence of the images, allowing for quantitative
-                                            measurement of similarity between them.</p>
+                                        <p class="body-text">In Figure 4.a, the cosine similarities are computed for each image, against every other image in the filtered set. A similarity of 1.0 between two images indicates similar images, 
+                                            whereas a similarity score closer to 0.0 indicates less similar images. The similarity scores generated from the embedding vectors (Figure 4.b) are used to identify image similarity in the image selection
+                                            algorithm, which greedily selects the sufficiently different image from a sorted list of the highest overall scored images.
+                                        </p>
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/VECTOR-SEARCH.jpg">
                                         </div>
                                 </div>
                                 <div style="margin-bottom: 20px">
                                     <h5 class="subheading fw-bold">Project Findings</h5>
-                                    <p class="body-text">The system I developed successfully returned the top K selected images based on overall quality and uniqueness.</p>
+                                    <p class="body-text">The developed Image Culling system successfully selected the top K images based on overall quality and a uniqueness constraint. From an initial
+                                        set of 38 untouched photographs, the system identified ten images ranked as highest quality and most dissimilar. Notably, a comparison with a prior, non-AI-aided
+                                        pre-selection revealed a 70% overlap (seven identical images). Among the three images uniquely selected by the AI, one (Figure 5: 034.JPG) was deemed unsuitable
+                                        for inclusion due to the subject being captured mid-blink. Despite this, the initial performance of the Image Culling System is promising. However, its effectiveness
+                                        may be influenced by factors such as a higher proportion of irrelevant images or varying stylistic preferences across different photographers.
+                                    </p>
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/SYSTEM-SELECTION.jpg">
-                                            <p class="body-text proj-page-caption">Output Results of Gemini Flash 2.0 Image Understanding, Ranked by Overall Score.</p>
+                                            <p class="body-text proj-page-caption">Figure 5: (Output Results of Gemini Flash 2.0 Image Understanding, Ranked by Overall Score)</p>
                                         </div>
                                         <div class="proj-page-image-component">
                                             <img src="assets/images/SHARED-SELECTION.jpg">
-                                            <p class="body-text proj-page-caption">Intersect of Selected Images by Human and by Gemini Flash 2.0.</p>
+                                            <p class="body-text proj-page-caption">Figure 6: (Intersect of Selected Images by Human and by Gemini Flash 2.0)</p>
                                         </div>
                                 </div>
                                 <div style="margin-bottom: 20px">
                                     <h5 class="subheading fw-bold">Future Improvements</h5>
-                                    <h6 class="subheading fw-bold">Few Shot Prompting</h6> <!-- Demonstrated in CSV-->
-                                    <p class="body-text">Before prompting the model to analyze the given image dataset, I will provide examples of the expected
-                                        analysis of each image.</p>
+                                    <p class="subheading">Addressing current system limitations and new opportunities for further development:</p>
+                                    <h6 class="subheading fw-bold">Inclusion of Few Shot Prompting</h6> <!-- Demonstrated in CSV-->
+                                    <p class="body-text">To assess Gemini's inherent Image Understanding capabilities, the system was initially evaluated without providing specific examples of high-scoring criteria. The model demonstrated
+                                        reasonable performance despite the ambiguous nature of the scoring requests for attributes like 'Pose Naturalness' and 'Smile Genuineness.' It is anticipated that the system's effectiveness could be
+                                        significantly enhanced by employing few-shot prompting with illustrative examples prior to scoring requests.
+                                    </p>
                                     <h6 class="subheading fw-bold">Immediate Removal of Edge Case Images</h6>
-                                    <p class="body-text">Currently, the system does not remove images where the subject's eyes are closed, where the image is completely or black/white.
-                                        This could improve the system's efficiency and accuracy, removing all unnessary images before they get further processed and scored. 
+                                    <p class="body-text">Currently, the system does not automatically filter images with closed eyes or those that are entirely black and white. While the initial dataset contained few such edge cases, an
+                                        image of the subject mid-blink was present in the selected set. Enhancing the system to immediately remove these unnecessary images would improve its efficiency and accuracy prior to further
+                                        processing and scoring.
                                     </p>
                                     <h6 class="subheading fw-bold">Calculating Quality Score</h6>
-                                    <p class="body-text">Currently, each criteria for image quality (Lighting Balance, Clarity/Sharpness, Pose Naturalness, and Smile Genuineness)
-                                        are being weighted equally, when calculating quality scores. Determining proper weights of each criteria could lead to an improved output, as
-                                        certain criteria could be more important than others, i.e. Clarity/Sharpness being more important than Lighting Balance.</p>
+                                    <p class="body-text">At the moment, the system assigns equal weight to each image quality criterion (Lighting Balance, Clarity/Sharpness, Pose Naturalness, Smile Genuineness, and Eye Openness) when calculating
+                                        overall quality scores. Adjusting these weights to reflect the relative importance of each criterion, such as prioritizing Clarity/Sharpness over Lighting Balance, could lead to a more refined and
+                                        accurate output.
+                                    </p>
                                 </div>
                                 <p class="body-text proj-page-caption">Last Updated: April 20th, 2025.</p>
                             </div>
